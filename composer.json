@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/GSXInternationalCheckoutWithIframe",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Installs International Checkout Button in your cart",
+    "authors": [
+    {
+        "name": "GlobalShopex",
+        "email": "alexis@GlobalShopex.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

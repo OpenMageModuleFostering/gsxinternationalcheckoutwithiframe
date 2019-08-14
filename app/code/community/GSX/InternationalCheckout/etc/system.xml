@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<shipping>
+			<groups>
+				<internationalcheckout translate="label" module="checkout">
+					<label>GSX International Checkout</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>13</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<name_of_company translate="label">
+							<label>Merchant ID</label>							
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>required-entry</validate>
+							<comment>
+								<![CDATA[
+									<span>Please click the link below to obtain the Merchant ID required for successful integration.<br/><a href="http://globalshopex.com/join_us.html" target="_newtab">http://globalshopex.com/join_us.html</a></span>
+								]]>
+							</comment>
+						</name_of_company>
+						<image_width translate="label">
+							<label>Local Shipping</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>validate-number</validate>
+							<comment>
+								<![CDATA[
+									<span>Example: 0</span>
+								]]>
+							</comment>
+						</image_width>
+						<image_height translate="label">
+							<label>Local Shipping EXP</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate>validate-number</validate>
+							<comment>
+								<![CDATA[
+									<span>Example: 0</span>
+								]]>
+							</comment>
+						</image_height>
+						<attrib_code translate="label">
+							<label>International Shipping Restriction Attribute Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<validate></validate>
+							<comment>
+								<![CDATA[
+									<span> * Value Required for Restricting International Shipping</span>
+								]]>
+							</comment>
+						</attrib_code>
+						<attrib_value translate="label">
+							<label>Iframe Active</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>
+								<![CDATA[
+									<span> For show GlobalShopex Cart over iframe true</span>
+								]]>
+							</comment>
+						</attrib_value>
+					</fields>
+				</internationalcheckout>
+			</groups>
+		</shipping>
+	</sections>	
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GSX_InternationalCheckout>
+            <active>true</active>
+            <codePool>community</codePool>			
+        </GSX_InternationalCheckout>
+		<depends>
+				<Mage_Checkout />
+		</depends>
+    </modules>
+</config>

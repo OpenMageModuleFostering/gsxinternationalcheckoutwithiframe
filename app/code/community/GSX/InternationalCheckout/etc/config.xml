@@ -1,0 +1,50 @@
+<config>
+	<modules>
+		<GSX_InternationalCheckout>
+			<version>1.1.3</version>
+		</GSX_InternationalCheckout>
+	</modules>
+	
+	<global>
+        <blocks>
+            <internationalcheckout>
+                <class>GSX_InternationalCheckout_Block</class>
+			</internationalcheckout>
+		</blocks>
+        <helpers>
+            <internationalcheckout>
+                <class>GSX_InternationalCheckout_Helper</class>
+			</internationalcheckout>
+		</helpers>
+	</global>
+	
+	<frontend>
+		<routers>
+			<GSX_InternationalCheckout>
+				<use>standard</use>
+				<args>
+					<module>GSX_InternationalCheckout</module>
+					<frontName>GSXInternationalCheckout</frontName>
+				</args>
+			</GSX_InternationalCheckout> 
+		</routers>
+		<layout>
+			<updates>
+				<internationalcheckout>
+					<file>internationalcheckout.xml</file>
+				</internationalcheckout>
+			</updates>
+		</layout>
+	</frontend>
+	
+	<default>
+		<checkout>
+			<internationalcheckout>				
+				<image_width>0</image_width>
+				<image_height>0</image_height>
+				<attrib_code>international_shipping</attrib_code>
+			</internationalcheckout>
+		</checkout>
+	</default>
+	
+</config>
