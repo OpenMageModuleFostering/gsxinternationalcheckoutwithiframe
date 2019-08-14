@@ -5,8 +5,8 @@
             <active>true</active>
             <codePool>community</codePool>			
         </Gsx_Globalshopex>
-		<depends>
-				<Mage_Checkout />
-		</depends>
+        <depends>
+            <Mage_Checkout />
+        </depends>
     </modules>
 </config>

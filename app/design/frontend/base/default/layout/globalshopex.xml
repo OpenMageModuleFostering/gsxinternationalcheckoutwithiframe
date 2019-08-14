@@ -1,21 +1,32 @@
 <?xml version="1.0"?>
 <layout version="0.0.1">
-   <checkout_cart_index> 
-       <reference name="content">
+    <checkout_cart_index> 
+        <reference name="content">
             <reference name="checkout.cart">
-            	<reference name="checkout.cart.methods">  
-					<block type="globalshopex/internationallogic" name="globalshopex.internationallogic" template="globalshopex/switchtypecart.phtml">
-						<block type="globalshopex/internationallogic" name="formiframe"  template="globalshopex/formiframe.phtml" />
-						<block type="globalshopex/internationallogic" name="buttoniframe"  template="globalshopex/buttoniframe.phtml" />
-						<block type="globalshopex/internationallogic" name="formcartocart"  template="globalshopex/formcarttocart.phtml" />
-					</block>
-				</reference>	
+                <reference name="checkout.cart.methods">  
+                    <block type="globalshopex/internationallogic" name="globalshopex.internationallogic" template="globalshopex/switchtypecart.phtml">
+                        <block type="globalshopex/internationallogic" name="formiframe"  template="globalshopex/formiframe.phtml" />
+                        <block type="globalshopex/internationallogic" name="buttoniframe"  template="globalshopex/buttoniframe.phtml" />
+                        <block type="globalshopex/internationallogic" name="formcartocart"  template="globalshopex/formcarttocart.phtml" />
+                    </block>
+                </reference>	
             </reference>
         </reference>
-	</checkout_cart_index>
-	<customer_account_login translate="label">
-		<reference name="content">
-			<block type="customer/account_forgotpassword" name="forgotPassword" template="globalshopex/login.phtml" />
-		</reference>
-	</customer_account_login>
+    </checkout_cart_index>
+    <customer_account_login translate="label">
+        <reference name="content">
+            <block type="customer/account_forgotpassword" name="forgotPassword" template="globalshopex/login.phtml" />
+        </reference>
+    </customer_account_login>
+    <gsxinternationalcheckout_tracking_index>    
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+            <reference name="content">
+                <block type="page/html" name="mmv.cotizador.automatico" output="toHtml" template="globalshopex/contentTracking.phtml"> 
+                </block>
+            </reference>
+        </reference>
+    </gsxinternationalcheckout_tracking_index>
 </layout>

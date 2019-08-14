@@ -120,7 +120,7 @@ class Gsx_Globalshopex_Block_Internationallogic extends Mage_Core_Block_Template
 		if($gsx_enablehttps){
 			$urlIFrame=str_replace('http:','https:',Mage::getBaseUrl());
 		}
-		$urlIFrame = $urlIFrame."GSXInternationalCheckout/GSX";
+		$urlIFrame = $urlIFrame."gsxinternationalcheckout/gsx";
 		return $urlIFrame;
 	}
 	

@@ -1,48 +1,53 @@
 <config>
-	<modules>
-		<Gsx_Globalshopex>
-			<version>1.0.4</version>
-		</Gsx_Globalshopex>
-	</modules>
+    <modules>
+        <Gsx_Globalshopex>
+            <version>1.0.4</version>
+        </Gsx_Globalshopex>
+    </modules>
 	
-	<global>
+    <global>
         <blocks>
             <globalshopex>
                 <class>Gsx_Globalshopex_Block</class>
             </globalshopex>
         </blocks>
+        <helpers>
+            <gsx_globalshopex>
+                <class>Gsx_Globalshopex_Helper</class>
+            </gsx_globalshopex>
+        </helpers>
     </global>
 	
-	<frontend>		
-		<routers>
-			<GSX_InternationalCheckout>
-				<use>standard</use>
-				<args>
-					<module>Gsx_Globalshopex</module>
-					<frontName>GSXInternationalCheckout</frontName>
-				</args>
-			</GSX_InternationalCheckout> 
-		</routers>
-		<layout>
-			<updates>
-                  <globalshopex>
-                        <file>globalshopex.xml</file>
-                  </globalshopex>
-             </updates>
-		</layout>
-	</frontend>
+    <frontend>		
+        <routers>
+            <gsxinternationalcheckout>
+                <use>standard</use>
+                <args>
+                    <module>Gsx_Globalshopex</module>
+                    <frontName>gsxinternationalcheckout</frontName>
+                </args>
+            </gsxinternationalcheckout> 
+        </routers>
+        <layout>
+            <updates>
+                <globalshopex>
+                    <file>globalshopex.xml</file>
+                </globalshopex>
+            </updates>
+        </layout>
+    </frontend>
 
-	<default>
-		<checkout>
-			<globalshopex>				
-				<gsx_active>0</gsx_active>
-				<typeintegration>0</typeintegration>
-				<gsx_is_live>0</gsx_is_live>
-				<gsx_enablehttps>0</gsx_enablehttps>
-				<gsx_local_shipping>0</gsx_local_shipping>
-				<gsx_local_shippingexp>0</gsx_local_shippingexp>
-				<typeintegration>1</typeintegration>
-			</globalshopex>
-		</checkout>
-	</default>
+    <default>
+        <checkout>
+            <globalshopex>				
+                <gsx_active>0</gsx_active>
+                <typeintegration>0</typeintegration>
+                <gsx_is_live>0</gsx_is_live>
+                <gsx_enablehttps>0</gsx_enablehttps>
+                <gsx_local_shipping>0</gsx_local_shipping>
+                <gsx_local_shippingexp>0</gsx_local_shippingexp>
+                <typeintegration>1</typeintegration>
+            </globalshopex>
+        </checkout>
+    </default>
 </config>

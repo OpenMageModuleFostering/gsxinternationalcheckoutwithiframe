@@ -1,5 +1,5 @@
 <?php
-class Gsx_Globalshopex_GSXController extends Mage_Core_Controller_Front_Action
+class Gsx_Globalshopex_GsxController extends Mage_Core_Controller_Front_Action
 {
     public function indexAction()
     {
