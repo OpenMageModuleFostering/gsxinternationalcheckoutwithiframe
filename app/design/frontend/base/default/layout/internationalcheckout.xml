@@ -4,14 +4,15 @@
 		<reference name="content">
             <reference name="checkout.cart">
             	<reference name="checkout.cart.methods">  
-					<block type="internationalcheckout/international" name="internationalcheckout.international" template="GSXInternationalcheckout/international.phtml"/>
+					<block type="internationalcheckout/international" name="internationalcheckout.international" template="internationalcheckout/international.phtml"/>
+					
 				</reference>	
 			</reference>
 		</reference>
 	</checkout_cart_index>  
 	<customer_account_login translate="label">
 		<reference name="content">
-			<block type="customer/account_forgotpassword" name="forgotPassword" template="GSXInternationalcheckout/login.phtml" />
+			<block type="customer/account_forgotpassword" name="forgotPassword" template="internationalcheckout/login.phtml" />
 		</reference>
 	</customer_account_login>
 </layout>

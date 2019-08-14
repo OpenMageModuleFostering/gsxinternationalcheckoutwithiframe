@@ -4,7 +4,7 @@ class GSX_InternationalCheckout_TrackingController extends Mage_Core_Controller_
     public function indexAction()
     {
 		$this->loadLayout();          
-		$templateFile='GSXInternationalcheckout/contentTracking.phtml';
+		$templateFile='InternationalCheckout/contentTracking.phtml';
 
 		$block = $this->getLayout()->createBlock(
 			'internationalcheckout/international',

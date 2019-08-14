@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>GSXInternationalCheckoutWithIframe</name>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/gpl-license">GPL</license>
     <channel>community</channel>
     <extends/>
     <summary>Installs International Checkout Button in your cart</summary>
     <description>Installs International Checkout Button in your cart</description>
-    <notes>This is Stable version</notes>
-    <authors><author><name>GlobalShopex</name><user>GlobalShopex</user><email>alexis@GlobalShopex.com</email></author></authors>
-    <date>2014-02-13</date>
-    <time>15:22:46</time>
-    <contents><target name="magecommunity"><dir name="GSX"><dir name="InternationalCheckout"><dir name="Block"><file name="International.php" hash="c79b41303e600072021220e101608d2a"/></dir><dir name="Helper"><file name="Data.php" hash="d8a7158a95e55c8258d3f9ce50765417"/></dir><dir name="Model"><file name="International.php" hash="d14d71c1c7ca9b1cd0ead5d8dca339b6"/><file name="Servers.php" hash="2460f3985e80eddad55e08c6c15c947c"/><file name="Shippingmethods.php" hash="fa7dd994638cddb5c7c54abca859cbd3"/></dir><dir name="controllers"><file name="CheckoutController.php" hash="b178d8b47970e80b49eec1955ee8587b"/><file name="InvoiceController.php" hash="131569367ceebcdde25be7f990cb64fd"/><file name="TrackingController.php" hash="23a145284a22a67218142886a1793ea7"/></dir><dir name="etc"><file name="config.xml" hash="15e002c641064169352a8a6743b4a332"/><file name="system.xml" hash="d5aa26ad2339c8177132f781b8e8841e"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="GSXInternationalcheckout"><file name="Login.phtml" hash="971f4e9cb3e01bd5dc7206b4470c4159"/><file name="contentCheckout.phtml" hash="ff210113bc548d6fe8117a6f7e15653e"/><file name="contentInvoice.phtml" hash="bc80d5e4fcf76068210bec4487c702a9"/><file name="contentTracking.phtml" hash="bcc63e5de842d1c1f621c1482cf3ebd9"/><file name="international.phtml" hash="ca16d3e1a89d786a78e58595fa93b1fc"/></dir></dir><dir name="layout"><file name="GSXinternationalcheckout.xml" hash="b0eeee710b686b8fec31346c09562c6b"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="GSX_InternationalCheckout.xml" hash="87aba4b6648f7a0b22855cab679c48a1"/></dir></target><target name="magemedia"><dir name="GSX"><dir name="images"><dir name="default"><file name="Thumbs.db" hash="f835bb8a505fa42d0338f2d427351bb1"/><file name="gc_button.gif" hash="4d53b9fb727fd399486e4c1d7b35170c"/></dir></dir></dir></target></contents>
+    <notes>Ths is Stable version</notes>
+    <authors><author><name>Globalshopex</name><user>Globalshopex</user><email>info@globalshopex.com</email></author></authors>
+    <date>2014-06-05</date>
+    <time>16:06:16</time>
+    <contents><target name="magecommunity"><dir name="GSX"><dir name="InternationalCheckout"><dir name="Block"><file name="International.php" hash="c79b41303e600072021220e101608d2a"/></dir><dir name="Helper"><file name="Data.php" hash="d8a7158a95e55c8258d3f9ce50765417"/></dir><dir name="Model"><file name="International.php" hash="d14d71c1c7ca9b1cd0ead5d8dca339b6"/><file name="Servers.php" hash="2460f3985e80eddad55e08c6c15c947c"/><file name="Shippingmethods.php" hash="fa7dd994638cddb5c7c54abca859cbd3"/></dir><dir name="controllers"><file name="CheckoutController.php" hash="33cd5395068517f179849e2b1e0cbc3e"/><file name="InvoiceController.php" hash="5acafe701d267bda8035aa04a49571ec"/><file name="TrackingController.php" hash="772dd7f4390ce80b037bd5be15eb25cf"/></dir><dir name="etc"><file name="config.xml" hash="77e29a1271abea4c43370559a02b0110"/><file name="system.xml" hash="a4f68eefdb6aa7bfc59acddabfc4defe"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="Internationalcheckout"><file name="Login.phtml" hash="971f4e9cb3e01bd5dc7206b4470c4159"/><file name="contentCheckout.phtml" hash="acf2742238bad0a408e4d2a6472ab9f7"/><file name="contentInvoice.phtml" hash="bc80d5e4fcf76068210bec4487c702a9"/><file name="contentTracking.phtml" hash="bcc63e5de842d1c1f621c1482cf3ebd9"/><file name="international.phtml" hash="27981ecb0d9b7509d1cbfee6f2405fad"/></dir></dir><dir name="layout"><file name="internationalcheckout.xml" hash="9cc53141430cb01172557996e4f43a69"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="GSX_InternationalCheckout.xml" hash="87aba4b6648f7a0b22855cab679c48a1"/></dir></target><target name="magemedia"><dir name="GSX"><dir name="images"><dir name="default"><file name="Thumbs.db" hash="f835bb8a505fa42d0338f2d427351bb1"/><file name="gc_button.gif" hash="4d53b9fb727fd399486e4c1d7b35170c"/></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>4.0.1</min><max>5.4.18</max></php></required></dependencies>
+    <dependencies><required><php><min>4.0.1</min><max>5.5.13</max></php></required></dependencies>
 </package>
