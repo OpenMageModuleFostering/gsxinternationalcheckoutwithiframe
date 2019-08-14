@@ -6,4 +6,8 @@ class Gsx_Globalshopex_Helper_Data extends Mage_Core_Helper_Abstract {
         return Mage::getStoreConfig("checkout/globalshopex/gsx_enableclearcart");
     }
 
+    public function getMerchantID() {
+        return Mage::getStoreConfig("checkout/globalshopex/gsxmerchatid");
+    }
+
 }
