@@ -25,7 +25,7 @@
             </action>
             <reference name="content">
                 <action method="unsetChildren"/>
-                <block type="page/html" output="toHtml" template="globalshopex/contentTracking.phtml"> 
+                <block type="page/html" name="tracking" output="toHtml" template="globalshopex/contentTracking.phtml"> 
                 </block>
             </reference>
         </reference>
