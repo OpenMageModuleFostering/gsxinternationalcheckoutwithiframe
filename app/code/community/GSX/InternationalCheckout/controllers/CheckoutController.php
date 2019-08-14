@@ -4,7 +4,7 @@ class GSX_InternationalCheckout_CheckoutController extends Mage_Core_Controller_
     public function indexAction()
     {
 		$this->loadLayout();          
-		$templateFile='InternationalCheckout/contentCheckout.phtml';
+		$templateFile='GSXInternationalcheckout/contentCheckout.phtml';
 
 		$block = $this->getLayout()->createBlock(
 			'internationalcheckout/international',

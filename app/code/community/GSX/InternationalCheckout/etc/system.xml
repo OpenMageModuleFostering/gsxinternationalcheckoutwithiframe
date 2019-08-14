@@ -25,7 +25,7 @@
 								]]>
 							</comment>
 						</name_of_company>
-						<image_width translate="label">
+						<local_shipping translate="label">
 							<label>Local Shipping</label>
 							<frontend_type>text</frontend_type>
 							<sort_order>2</sort_order>
@@ -38,8 +38,8 @@
 									<span>Example: 0</span>
 								]]>
 							</comment>
-						</image_width>
-						<image_height translate="label">
+						</local_shipping>
+						<local_shippingexp translate="label">
 							<label>Local Shipping EXP</label>
 							<frontend_type>text</frontend_type>
 							<sort_order>3</sort_order>
@@ -52,8 +52,8 @@
 									<span>Example: 0</span>
 								]]>
 							</comment>
-						</image_height>
-						<attrib_code translate="label">
+						</local_shippingexp>
+						<restriction_item translate="label">
 							<label>International Shipping Restriction Attribute Code</label>
 							<frontend_type>text</frontend_type>
 							<sort_order>4</sort_order>
@@ -66,11 +66,11 @@
 									<span> * Value Required for Restricting International Shipping</span>
 								]]>
 							</comment>
-						</attrib_code>
-						<attrib_value translate="label">
+						</restriction_item>
+						<iframe_active translate="label">
 							<label>Iframe Active</label>
 							<frontend_type>text</frontend_type>
-							<sort_order>4</sort_order>
+							<sort_order>5</sort_order>
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
@@ -79,10 +79,34 @@
 									<span> For show GlobalShopex Cart over iframe true</span>
 								]]>
 							</comment>
-						</attrib_value>
+						</iframe_active>
+						<developer_site translate="label">
+							<label>Developer Site</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>
+								<![CDATA[
+									<span> Testing Site</span>
+								]]>
+							</comment>
+						</developer_site>
 					</fields>
 				</internationalcheckout>
 			</groups>
 		</shipping>
 	</sections>	
+	<default>
+		<shipping>
+			<internationalcheckout>
+				<internationalcheckout>
+					<iframe_active>true</iframe_active>
+					<developer_site>false</developer_site>
+				</internationalcheckout>
+			</internationalcheckout>
+		</shipping>
+	</default>
+	
 </config>

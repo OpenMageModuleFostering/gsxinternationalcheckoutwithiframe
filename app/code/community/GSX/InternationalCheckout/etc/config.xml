@@ -31,7 +31,7 @@
 		<layout>
 			<updates>
 				<internationalcheckout>
-					<file>internationalcheckout.xml</file>
+					<file>GSXinternationalcheckout.xml</file>
 				</internationalcheckout>
 			</updates>
 		</layout>
