@@ -24,7 +24,8 @@
                 <template>page/1column.phtml</template>
             </action>
             <reference name="content">
-                <block type="page/html" name="mmv.cotizador.automatico" output="toHtml" template="globalshopex/contentTracking.phtml"> 
+                <action method="unsetChildren"/>
+                <block type="page/html" output="toHtml" template="globalshopex/contentTracking.phtml"> 
                 </block>
             </reference>
         </reference>

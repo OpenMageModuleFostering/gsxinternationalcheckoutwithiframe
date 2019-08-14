@@ -18,4 +18,16 @@
             <block type="customer/account_forgotpassword" name="forgotPassword" template="globalshopex/login.phtml" />
         </reference>
     </customer_account_login>
+    <gsxinternationalcheckout_tracking_index>    
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+            <reference name="content">
+                <action method="unsetChildren"/>
+                <block type="page/html" output="toHtml" template="globalshopex/contentTracking.phtml"> 
+                </block>
+            </reference>
+        </reference>
+    </gsxinternationalcheckout_tracking_index>
 </layout>
