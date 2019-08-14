@@ -4,7 +4,7 @@
 		public function ProcessAction()
 		{
 			$this->loadLayout();          
-			$templateFile='InternationalCheckout/contentInvoice.phtml';
+			$templateFile='GSXInternationalcheckout/contentInvoice.phtml';
 			
 			$block = $this->getLayout()->createBlock(
 			'internationalcheckout/international',
@@ -20,7 +20,7 @@
 		public function indexAction()
 		{
 		$this->loadLayout();          
-			$templateFile='InternationalCheckout/contentInvoice.phtml';
+			$templateFile='GSXInternationalcheckout/contentInvoice.phtml';
 			
 			$block = $this->getLayout()->createBlock(
 			'internationalcheckout/international',

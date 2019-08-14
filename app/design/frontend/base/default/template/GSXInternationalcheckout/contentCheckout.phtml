@@ -1,15 +1,17 @@
 <?php
+	$IsiframeActive = trim(Mage::getStoreConfig('shipping/internationalcheckout/iframe_active'));
 	$merchant_id = trim(Mage::getStoreConfig('shipping/internationalcheckout/name_of_company'));
-	$GSX_Localshipping_EXP = trim(Mage::getStoreConfig('shipping/internationalcheckout/image_width'));
-	$GSX_Localshipping = trim(Mage::getStoreConfig('shipping/internationalcheckout/image_height')); 
-	$GSX_shipping_restriction_attribute_code = trim(Mage::getStoreConfig('shipping/internationalcheckout/attrib_code')); 
+	$GSX_Localshipping_EXP = trim(Mage::getStoreConfig('shipping/internationalcheckout/local_shippingexp'));
+	$GSX_Localshipping = trim(Mage::getStoreConfig('shipping/internationalcheckout/local_shipping')); 
+	$GSX_restriction_attribute = trim(Mage::getStoreConfig('shipping/internationalcheckout/restriction_item')); 
+	$sslActive = trim(Mage::getStoreConfig('shipping/internationalcheckout/developer_site')); 
 
+	
 	if($merchant_id != ""){
 		$gc_url = $this->GC_URL;
 	}else{
 		$gc_url = "http://globalshopex.com/join_us.html";
 	}	
-	
 	
 	?>
 
@@ -34,33 +36,36 @@
 						$ProductPrice  =  substr ( $ProductPrice   , 0,strrpos($ProductPrice, ".") +3 ) ;
 						$ProductWeight=$_Product->getWeight();
 						$ProductWeight  =  substr ( $ProductWeight   , 0,strrpos($ProductWeight, ".") +3 ) ;
+						if($ProductWeight=="") $ProductWeight="0";
+
 						
-						 
-						
-						$output .= "<input type=\"hidden\" name=\"ProductDesc$i\" value=\"".$this->buildItemDescription($item)."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductSKU$i\" value=\"".$_Product->getSku()."\"/>\n";
+						$output .= "<input type=\"hidden\" name=\"ProductDesc$i\" value=\"".$this->buildItemDescription($item)."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductLink$i\" value=\"".$this->getProductUrl($item)."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductQty$i\" value=\"".$item->getQty()."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductPrice$i\" value=\"".$ProductPrice ."\"/>\n";
-						$output .= "<input type=\"hidden\" name=\"ProductBrand$i\" value=\"".$this->getBrand($item)."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductSize$i\" value=\"".$this->getSize($item)."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductColor$i\" value=\"".$this->getColor($item)."\"/>\n";
 						$output .= "<input type=\"hidden\" name=\"ProductWeight$i\" value=\"".$ProductWeight."\"/>\n";
-						$output .= "<input type=\"hidden\" name=\"ProductCountry$i\" value=\"".$item->getCountry()."\"/>\n";
-										  
-						// International Shipping Restriction Check
+						if($item->getCountry()!="")
+							$output .= "<input type=\"hidden\" name=\"ProducCountry$i\" value=\"".$item->getCountry()."\"/>\n";
+						if($this->getBrand($item)!="")
+							$output .= "<input type=\"hidden\" name=\"ProductBrand$i\" value=\"".$this->getBrand($item)."\"/>\n";
 						
 						$attributes = Mage::getResourceModel('eav/entity_attribute_collection')
 							  ->setEntityTypeFilter($_Product->getResource()->getTypeId())
-							  ->addFieldToFilter('attribute_code', $GSX_shipping_restriction_attribute_code) 
+							  ->addFieldToFilter('attribute_code', $GSX_restriction_attribute) 
 							  ->load(false);
+						
 						$attribute = $attributes->getFirstItem()->setEntity($_Product->getResource());
 						$manufac = $attribute->getSource()->getAllOptions(false);
 						foreach ($manufac as $man) {
 							$intshiping[$man['value']] = $man['label'];
 						}
-						if($intshiping[$_Product->getData($GSX_shipping_restriction_attribute_code)] == 'No')	$output .= "<input type=\"hidden\" name=\"Restricted$i\" value='0'/>\n";
-						else $output .= "<input type=\"hidden\" name=\"Restricted$i\" value='0'/>\n";
+						
+						
+						if($_Product->getData($GSX_restriction_attribute) == '1')
+							$output .= "<input type=\"hidden\" name=\"Restricted$i\" value='1'/>\n";
 						$imgWidth = "";
 						$imgHeight = "";
 					
@@ -73,8 +78,8 @@
 					
 					echo $output;
 					
-					if(isset($GSX_Localshipping_EXP)) $gsx_ls_exp = $GSX_Localshipping_EXP; else $gsx_ls_exp = "0";
-					if(isset($GSX_Localshipping)) $gsx_ls = $GSX_Localshipping; else $gsx_ls = "0";
+					if($GSX_Localshipping_EXP!="") $gsx_ls_exp = $GSX_Localshipping_EXP; else $gsx_ls_exp = "0";
+					if($GSX_Localshipping!="") $gsx_ls = $GSX_Localshipping; else $gsx_ls = "0";
 					
 					$GSX_totals = $session->getQuote()->getData();
 					$coupon_code = $GSX_totals['coupon_code'];
@@ -82,14 +87,6 @@
 					$perc = ($discount * 100) / $GSX_totals['subtotal'];
 					$perc = round($perc , 2);
 					?>
-					<!--
-					
-					<input type="hidden" name="ODiscount" value="<?php echo $perc; ?>" /> 
-					<input type="hidden" name="ODiscCode" value="<?php echo $coupon_code; ?>" /> 
-					<input type="hidden" name="ODiscPerc" value="1" /> 
-					<input type="hidden" name="PrefilledCart" value="http://127.0.0.1/magento/index.php/GSXInternationalCheckout?gsxOption=Checkout">
-					
-					-->
 					
 					<input type="hidden" name="MerchantID" value="<?php echo $merchant_id; ?>" />   
 					<input type="hidden" name="LocalShippingEXP" value="<?php echo $gsx_ls_exp; ?>" /> 
