@@ -11,6 +11,8 @@
 	$GSX_Localshipping = trim(Mage::getStoreConfig('shipping/internationalcheckout/image_height')); 
 	$GSX_shipping_restriction_attribute_code = trim(Mage::getStoreConfig('shipping/internationalcheckout/attrib_code')); 
 
+	$serverNameUsed="";
+	
 	if($merchant_id != ""){
 		$gc_url = $this->GC_URL;
 	}else{
@@ -18,10 +20,14 @@
 	}
 	if ($IsiframeActive=='true')
 	{
+		$serverNameUsed=Mage::getBaseUrl();
+		$serverNameUsed=str_replace('http:','https:',$serverNameUsed);
+		
+		
 ?>
 
-<a href="<?php echo Mage::getBaseUrl() ?>GSXInternationalCheckout/Checkout" title="<?php echo $this->__('Global Checkout') ?>" >
-<button title="<?php echo $this->__('Global Checkout') ?>" class="" <?php echo $this->buttonImagePath(); ?>></button>	
+<a href="<?php echo  $serverNameUsed ?>GSXInternationalCheckout/Checkout" title="<?php echo $this->__('Global Checkout') ?>" >
+<div <?php echo $this->buttonImagePath(); ?>>	</div>
 </a>
 
 <?php
